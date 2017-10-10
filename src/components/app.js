@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 
 import AddItem from './add-item';
+import IndexItem from './index-item';
+
 
 export default class App extends Component {
   render() {
@@ -9,6 +11,7 @@ export default class App extends Component {
       <div>
         React simple starter
         <AddItem/>
+        <IndexItem/>
       </div>
     );
   }
