@@ -29,17 +29,17 @@ class Dashboards extends Component
 ];
 
 var myAreaValues = [
-  { text : "First Series", values : [0,1,2,2,4,6,7] },
-  { text : "Second Series", values : [18,12,7,14,1,19,4] },
-  { text : "Third Series", values : [0,1,12,12,4,6,17] },
-  { text : "Fourth Series", values : [18,22,17,4,1,9,4] },
+  { text : "Q1", values : [0,1,2,2,4,6,7] },
+  { text : "Q2", values : [18,12,7,14,1,19,4] },
+  { text : "Q3", values : [0,1,12,12,4,6,17] },
+  { text : "Q4", values : [18,22,17,4,1,9,4] },
 ];
 
 var pieSlices = [
-  { text : "First Slice", values : [10] },
-  { text : "Second Slice", values : [20] },
-  { text : "Third Slice", values : [30] },
-  { text : "Fourth Slice", values : [40] }
+  { text : "Ubereats", values : [10] },
+  { text : "Eat24", values : [20] },
+  { text : "Grubhub", values : [30] },
+  { text : "Postmates", values : [40] }
 ];
 
 
@@ -47,6 +47,33 @@ var pieSlices = [
 		return(
 		<Container fluid={true}>
 
+		<Row>
+         <Panel>
+        <Col md="8">
+          <AreaChart id="chart2"
+                    height="300"
+                    width="690"
+                    series={myAreaValues}
+                    legend="true"
+                    theme="dark"
+                    title=""/>
+         </Col>
+
+
+         <Col md="4">
+          <PieChart id="chart3"
+                    height="300"
+                    width="330"
+                    series={pieSlices}
+                    legend="true"
+                    theme="dark"
+                    title=""/>
+         </Col>
+         </Panel>
+         
+
+
+         </Row>
 		 
 		
 		<Row>
@@ -61,22 +88,9 @@ var pieSlices = [
                     title="Annual Report"/>
          </Col>
          </Panel>
+         </Row>
 		
 
-         <Col md="12">
-
-          <AreaChart 
-                     height="300"
-                     width="800"
-                     series={myAreaValues}
-                     legend="true"
-                     theme="slate"
-                     title="Area Chart"/>
-         </Col>        
-         
-
-
-         </Row>
 
          
 
