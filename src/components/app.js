@@ -54,6 +54,8 @@ export default class App extends Component {
       	<Tabs defaultSelectedIndex={1} justified={true}>
         	<Tab value="pane-1" label="Report"><Dashboards/></Tab>
         	<Tab value="pane-2" label="List"><IndexItem/></Tab>
+        	<Tab value="pane-3" label="Add Item"><AddItem/></Tab>
+
       	</Tabs>
 
       	</div>

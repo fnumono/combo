@@ -31,11 +31,13 @@ class AddItem extends Component {
     e.preventDefault();
 
     var data = {
-      app_name: 'postmate',
-      description: 'pizza',
-      pickup_name: 'robert',
-      restaurant_name: 'beach pizza'
-    };
+      app_name: 'Grubhub',
+      description: 'Noodles',
+      pickup_name: 'Jimmy',
+      restaurant_name: 'Noodle Store'
+    }
+
+    
 
     //this.addItemService.sendData(this.state.value);
     this.addItemService.sendOrder(data);

@@ -51,7 +51,7 @@ class IndexItem extends Component
         <table className="table table-striped">
           <thead>
             <tr>
-              <td>No.</td>
+              <td>Order Number</td>
               <td>App Name</td>
               <td>Description</td>
               <td>Pick Up Name </td>
