@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 
 import ItemService from './item-service';
 
+import Container from 'muicss/lib/react/container';
+import Row from 'muicss/lib/react/row';
+import Col from 'muicss/lib/react/col';
+
 class AddItem extends Component {
 
   constructor(props)
@@ -25,13 +29,27 @@ class AddItem extends Component {
   handleSubmit(e)
   {
     e.preventDefault();
-    this.addItemService.sendData(this.state.value);
+
+    var data = {
+      app_name: 'postmate',
+      description: 'pizza',
+      pickup_name: 'robert',
+      restaurant_name: 'beach pizza'
+    };
+
+    //this.addItemService.sendData(this.state.value);
+    this.addItemService.sendOrder(data);
   }
 
   render()
   {
     return (
-      <div className="container">
+      <Container fluid={true}>
+      <Row>
+        <Col md="6" md-offset="4">
+          
+   
+
         <form onSubmit={this.handleSubmit}>
           <label>
             Add Item:
@@ -39,7 +57,11 @@ class AddItem extends Component {
           </label><br/>
             <input type="submit" value="submit" className="btn btn-primary"/>
         </form>
-      </div>
+
+    </Col>
+    </Row>
+
+      </Container>
     );
   }
 }

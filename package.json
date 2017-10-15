@@ -28,12 +28,19 @@
   "dependencies": {
     "axios": "^0.16.2",
     "babel-preset-stage-1": "^6.1.18",
+    "chart.js": "^2.7.0",
     "lodash": "^3.10.1",
+    "muicss": "^0.9.27",
     "react": "^0.14.3",
+    "react-chartjs": "^0.8.0",
+    "react-dazzle": "^1.2.7",
     "react-dom": "^0.14.3",
+    "react-modal": "^3.0.0",
     "react-redux": "4.3.0",
     "react-router": "^2.0.1",
     "react-router-dom": "^4.0.0",
-    "redux": "^3.0.4"
+    "redux": "^3.0.4",
+    "zingchart": "^2.6.1",
+    "zingchart-react": "^1.0.6"
   }
 }

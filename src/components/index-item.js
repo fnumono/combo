@@ -13,7 +13,8 @@ class IndexItem extends Component
 
     this.state = {
       value: '',
-      items: ''
+      items: '',
+      orders: ''
     }
 
     this.addItemService = new ItemService();
@@ -21,10 +22,11 @@ class IndexItem extends Component
 
   componentDidMount()
   {
-    axios.get('http://www.localhost:4200/items')
+    axios.get('http://www.localhost:4200/orders')
     .then(response=>{
-      this.setState({items: response.data});
-      console.log(response.data);
+      //this.setState({items: response.data});
+      this.setState({orders: response.data});
+      console.log(response.data[0].order);
     })
     .catch(function(error) {
       console.log(error);
@@ -33,9 +35,10 @@ class IndexItem extends Component
 
   tabRow()
   {
-    if (this.state.items instanceof Array)
+    //if (this.state.items instanceof Array)
+    if (this.state.orders instanceof Array)
     {
-      return this.state.items.map(function(object, i){
+      return this.state.orders.map(function(object, i){
         return <TableRow obj={object} num={i} key={i}/>
       });
     }
@@ -49,7 +52,10 @@ class IndexItem extends Component
           <thead>
             <tr>
               <td>No.</td>
-              <td>Item</td>
+              <td>App Name</td>
+              <td>Description</td>
+              <td>Pick Up Name </td>
+              <td>Restaurant Name </td>
             </tr>
           </thead>
           <tbody>

@@ -13,10 +13,19 @@ class TableRow extends Component
             {this.props.num}
           </td>
           <td>
-            {this.props.obj.item}
+            {this.props.obj.order.app_name}
           </td>
           <td>
-            <Link to={"/edit/"+this.props.obj._id} className="btn btn-primary"> Edit </Link>
+            {this.props.obj.order.description}
+          </td>
+          <td>
+            {this.props.obj.order.pickup_name}
+          </td>
+          <td>
+            {this.props.obj.order.restaurant_name}
+          </td>
+          <td>
+            <span className="glyphicon glyphicon-inbox"></span>
           </td>
           <td>
             <button className="btn btn-danger"> Delete </button>

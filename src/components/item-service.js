@@ -31,6 +31,21 @@ class ItemService
     .then(console.log('Deleted'))
     .catch(err=>console.log(err))
   }
+
+  sendOrder(data)
+  {
+    axios.post('http://localhost:4200/orders/add/post',{
+      order: data
+    })
+    .then(function(response){
+      console.log(response);
+    })
+    .catch(function(error){
+      console.log(error)
+    });
+  }
+
+
 }
 
 export default ItemService;
